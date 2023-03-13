@@ -6,7 +6,7 @@ from streamlit_option_menu import option_menu
 
 # loading the saved models
 
-bodyfat_model = pickle.load(open('C:/Users/ASK Kanse/Downloads/bodyfat_model.sav', 'rb'))
+bodyfat_model = pickle.load(open('bodyfat_model.sav', 'rb'))
 
 
 
@@ -98,7 +98,7 @@ if (selected == 'Body Mass Index'):
     # page title
     st.title('Body Mass Index')
     # page title
-    image = Image.open('C:/Users/ASK Kanse/Downloads/OPI.jpg')
+    image = Image.open('OPI.jpg')
     st.image(image, caption='BMI')
     st.latex(r'''
      a + ar + a r^2 + a r^3 + \cdots + a r^{n-1} =
@@ -160,9 +160,9 @@ if (selected == 'Solution'):
     st.write('2. Resistance Training: Incorporating resistance training exercises, such as weight lifting or bodyweight exercises, can help you build muscle mass and increase your metabolism, which can help you burn more fat even at rest.')
     st.write('3. Get Enough Sleep: Sleep plays an important role in weight loss and fat loss. Aim for 7-9 hours of quality sleep per night. Lack of sleep can increase hunger and cravings, leading to overeating and weight gain. Manage Stress: Chronic stress can lead to weight gain and increased body fat. Incorporate stress-management techniques, such as meditation, deep breathing, or yoga, to help you manage stress and improve your overall health. Remember, losing fat takes time and effort.') 
     st.write('Its important to make sustainable lifestyle changes and be patient with the process. Consult with a healthcare professional before starting any weight loss program.')
-    image = Image.open('C:/Users/ASK Kanse/Downloads/diet.jpg')
+    image2 = Image.open('diet.jpg')
 
-    st.image(image, caption='Your life is very precious')
+    st.image(image2, caption='Your life is very precious')
 
 
 
