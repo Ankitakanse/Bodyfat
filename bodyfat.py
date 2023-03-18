@@ -79,16 +79,12 @@ if (selected == 'Fat Prediction'):
     # creating a button for Prediction
     
     
-    if st.button('Bodyfat Test Result'):
-        fat_prediction = bodyfat_model.predict([[Age, Weight, Height, Neck, Chest, Abdomen, Hip, Thigh, Knee, Ankle, Biceps, Forearm, Wrist]])
+   if st.button('Bodyfat Test Result'): 
+        new_df = pd.DataFrame([[Age, Weight, Height, Neck, Chest, Abdomen, Hip, Thigh, Knee, Ankle, Biceps, Forearm, Wrist]])
+        fat_prediction = bodyfat_model.predict(new_df)
+        st.write('Predicted body fat percentage:')
+        st.success(fat_prediction[0])
         
-        if (Hip == Abdomen):
-            fat_diagnosis = 'The person is fat' 
-        else:
-                fat_diagnosis = 'The person is not fat'
-    
-    st.success(fat_diagnosis)
-    
     
     
 
