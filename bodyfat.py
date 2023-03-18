@@ -83,7 +83,7 @@ if (selected == 'Fat Prediction'):
         new_df = pd.DataFrame([[Age, Weight, Height, Neck, Chest, Abdomen, Hip, Thigh, Knee, Ankle, Biceps, Forearm, Wrist]])
         fat_prediction = bodyfat_model.predict(new_df)
         
-    st.write('Predicted body fat percentage:',fat_prediction[0])
+    st.write('Predicted body fat percentage:')
     route=fat_prediction[0]    
     st.success(route)
         
