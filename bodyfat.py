@@ -84,8 +84,8 @@ if (selected == 'Fat Prediction'):
         fat_pred = bodyfat_model.predict(new_df)
         
     st.write('Predicted body fat percentage:')
-    st.write(fat_pred[0])   
-    st.success(route)
+    
+    st.success(fat_pred[0])
         
     
     
