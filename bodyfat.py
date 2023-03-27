@@ -60,7 +60,7 @@ if (selected == 'Fat Prediction'):
         
     st.write('Predicted body fat percentage:')
     
-    st.success(new_pred)
+    st.success(new_data)
         
     
     
