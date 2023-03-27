@@ -7,7 +7,7 @@ import pandas as pd
 
 # loading the saved models
 
-bodyfat_model = pickle.load(open('bodyfat_model.sav', 'rb'))
+bodyfat_model = pickle.load(open('bodyfat_model2.sav', 'rb'))
 
 
 
@@ -37,16 +37,10 @@ if (selected == 'Fat Prediction'):
         Age = st.text_input('Age of the Person')
         
     with col2:
-        Weight = st.text_input('Weight of the Person in lbs')
+        Weight = st.text_input('Weight of the Person')
     
     with col3:
-        Height = st.text_input('Height in inches')
-    
-    with col1:
-        Neck = st.text_input('Neck Size value in cm')
-    
-    with col2:
-        Chest = st.text_input('Chest size value in cm ')
+        Height = st.text_input('Height in cm')
     
     with col3:
         Abdomen= st.text_input('Abdomen size in cm')
@@ -54,33 +48,14 @@ if (selected == 'Fat Prediction'):
     with col1:
        Hip = st.text_input('Hip size value in cm')
     
-    with col2:
-       Thigh = st.text_input('Thigh measure in cm')
-       
-    with col3:
-       Knee = st.text_input('Knee size in cm')
-       
-    with col1:
-       Ankle = st.text_input('Ankle size in cm')
-       
-    with col2:
-       Biceps = st.text_input('Size of Biceps in cm ')
-       
-    with col3:
-       Forearm = st.text_input('Forearm size in cm')
-       
-    with col2:
-       Wrist = st.text_input('Wrist size of the Person in cm')
-    
-    
-    
+   
     # code for Prediction
     fat_diagnosis = ''
     
     # creating a button for Prediction
     
     if st.button('Bodyfat Test Result'): 
-        new_df = pd.DataFrame([[Age, Weight, Height, Neck, Chest, Abdomen, Hip, Thigh, Knee, Ankle, Biceps, Forearm, Wrist]])
+        new_df = pd.DataFrame([[Age, Weight, Height, Abdomen, Hip,]])
         fat_pred = bodyfat_model.predict(new_df)
         
     st.write('Predicted body fat percentage:')
