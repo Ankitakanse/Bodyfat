@@ -7,7 +7,7 @@ import pandas as pd
 
 # loading the saved models
 
-bodyfat_model = pickle.load(open('bodyfat_model2.sav', 'rb'))
+bodyfat_model = pickle.load(open('bodyfat_model3.sav', 'rb'))
 
 
 
@@ -31,7 +31,7 @@ if (selected == 'Fat Prediction'):
     
     
     # getting the input data from the user
-    col1, col2, col3 = st.columns(3)
+    col1, col2, col3 = st.columns(2)
     
     with col1:
         Age = st.text_input('Age of the Person')
@@ -55,12 +55,12 @@ if (selected == 'Fat Prediction'):
     # creating a button for Prediction
     
     if st.button('Bodyfat Test Result'): 
-        new_df = pd.DataFrame([[Age, Weight, Height, Abdomen, Hip,]])
-        fat_pred = bodyfat_model.predict(new_df)
+        new_data = pd.DataFrame([[Age, Weight, Height, Abdomen, Hip,]])
+        new_pred = bodyfat_model3.predict(new_data)
         
     st.write('Predicted body fat percentage:')
     
-    st.success(fat_pred[0])
+    st.success(new_pred[0])
         
     
     
