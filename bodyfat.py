@@ -56,7 +56,7 @@ if (selected == 'Fat Prediction'):
     
     if st.button('Bodyfat Test Result'): 
         new_data = pd.DataFrame([[Age, Weight, Height, Abdomen, Hip,]])
-        new_pred = bodyfat_model3.predict(new_data)
+        new_pred = bodyfat_model.predict(new_data)
         
     st.write('Predicted body fat percentage:')
     
