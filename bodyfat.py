@@ -31,7 +31,7 @@ if (selected == 'Fat Prediction'):
     
     
     # getting the input data from the user
-    col1, col2, col3 = st.columns(2)
+    col1, col2 = st.columns(2)
     
     with col1:
         Age = st.text_input('Age of the Person')
@@ -39,10 +39,10 @@ if (selected == 'Fat Prediction'):
     with col2:
         Weight = st.text_input('Weight of the Person')
     
-    with col3:
+    with col1:
         Height = st.text_input('Height in cm')
     
-    with col3:
+    with col2:
         Abdomen= st.text_input('Abdomen size in cm')
     
     with col1:
